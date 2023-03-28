@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    height: auto;
+    max-width: 100vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+
+.container-general{
+    width: 100%;
+    min-height: 90vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+h2{
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    max-width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.get-all-contactos-box{
+    width: 100%;
+    min-height: 90vh;
+    display:flex;
+    flex-direction:column;
+    margin: 0px;
+    padding: 0px;
+}
+
+.get-all-contactos-box span{
+    height: 10vh;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.get-all-contactos-box main{
+    margin-top: 5vh;
+    height: auto;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.get-all-contactos-box input{
+    width: 90%;
+    height: 7vh;
+}
+
+
+.get-all-contactos-box main table{
+    width: 90%;
+    height: auto;
+}
+
+.cabezera-tabla{
+    width: 100%;
+    height: 7vh;
+}
+
+.cuerpo-tabla{
+    width: 100%;
+    height: auto;
+    max-height: 61vh;
+}
+
