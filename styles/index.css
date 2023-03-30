@@ -39,6 +39,13 @@ h1{
     padding: 0px;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  padding-left: 10px; 
+}
+
 .get-all-contactos-box{
     width: 100%;
     min-height: 90vh;
@@ -87,3 +94,30 @@ h1{
     max-height: 61vh;
 }
 
+.title-add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+}
+
+.funcionesDeTabla{
+    text-align: end;
+}
+
+.icons-contactos{
+    width: 20px;
+    color: white;
+}
+
+.icons-contactos:hover{
+    cursor: pointer;
+    color: rgb(180 180 180)
+}
+
+.box-logo{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
