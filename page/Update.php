@@ -1,17 +1,10 @@
 <?php
 include("../templates/header.php");
 include("../database/db.php");
+include("../functions/obtenerDataPorId.php");
 
-if (isset($_GET['id']) == null) return 0;
-
-$id = $_GET['id'];
-$sentancia = $dbh->prepare("SELECT * FROM Usuarios WHERE id=:id");
-$sentancia->bindParam(":id", $id);
-$sentancia->execute();
-$content = $sentancia->rowCount();
-
-if ($content == 0) return 0;
-$data = $sentancia->fetch();
+$id = $_GET["id"];
+$data = dataUserWhereId($id);
 
 ?>
 

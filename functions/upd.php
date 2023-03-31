@@ -1,17 +1,17 @@
+<?php 
+    include("../templates/header.php");
+?>
 <?php
 if (isset($_POST['id']) == null) return 0;  
 
 include("../database/db.php");
+include("./validacio.php");
 
 $id = $_POST["id"];
 $name = $_POST["Name"];
 $phone = $_POST["Phone"];
 
-if ($name == "" || $phone == null) {
-    header("Location: /page/getAllContactos.php");
-    echo '<script>errorEdit()</script>';
-    return 0;
-}
+if(!validacionEditar($name , $phone , $id)) return 0;
 
 $sentancia = $dbh->prepare("UPDATE Usuarios SET nombre=:name, telefono=:phone WHERE id=:id");
 $sentancia->bindParam(":id", $id);
@@ -21,11 +21,13 @@ $sentancia->execute();
 
 ob_start();
 
-header("Location: /page/getAllContactos.php");
-
-echo '<script>successEdit()</script>';
+echo '<script>';
+echo 'successEdit()';
+echo '</script>';
 
 ob_end_flush();
 
-exit;
+?>
+<?php 
+    include("../templates/footer.php");
 ?>

@@ -1,4 +1,4 @@
 </div>
-<script type="text/javascript" src="../js/mesajes.js"></script>
+<script type="text/javascript" src="/js/filtro.js"></script>
 </body>
 </html>

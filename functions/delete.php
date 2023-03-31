@@ -1,3 +1,6 @@
+<?php 
+    include("../templates/header.php");
+?>
 <?php
 
 include("../database/db.php");
@@ -6,9 +9,11 @@ if (isset($_GET['id']) == null) return 0;
 
 $id = $_GET['id'];
 
-if($id == 0){
-    header("Location: /page/getAllContactos.php");
-    echo '<script>errorDelete()</script>';
+if($id == 0 || $id == null){
+    echo '<script>';
+    echo 'errorDelete()';
+    echo '</script>';
+    
     return 0;
 }
 
@@ -18,11 +23,13 @@ $sentancia->execute();
 
 ob_start();
 
-header("Location: /page/getAllContactos.php");
-
-echo '<script>successDelete()</script>';
+echo '<script>';
+echo 'successDelete()';
+echo '</script>';
 
 ob_end_flush();
 
-exit;
+?>
+<?php 
+    include("../templates/footer.php");
 ?>
